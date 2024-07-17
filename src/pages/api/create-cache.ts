@@ -28,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const result = await sql`
       INSERT INTO geocaches (name, latitude, longitude, description, public)
-      VALUES (${name}, ${await hash(latitude.toString())}, ${await hash(longitude.toString())}, ${description}, ${publicCache})
+      VALUES (${name}, ${await hash(latitude.toString())}, ${await hash(longitude.toString())}, ${description}, ${publicCache ? publicCache : true})
       RETURNING *
     `;
 
