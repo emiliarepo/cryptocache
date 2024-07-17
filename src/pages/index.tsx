@@ -55,15 +55,13 @@ export default function Home() {
         </div>
       </main>
       <footer className="bg-emerald-600 dark:bg-emerald-800 text-slate-100 py-4 px-6 text-center">
-  <p className="text-sm">
-    This site is proudly powered by Open Source Software. <a href="https://github.com/emiliarepo/cryptocache" className="text-white underline">GitHub Repository</a>.
-  </p>
-  <p className="text-sm">
-    <strong>Disclaimer:</strong> This page is purely fictional, and the caches on this page point to bogus locations.
-  </p>
-</footer>
-
+        <p className="text-sm">
+          This site is proudly powered by Open Source Software. <a href="https://github.com/emiliarepo/cryptocache" className="text-white underline">GitHub Repository</a>.
+        </p>
+        <p className="text-sm">
+          <strong>Disclaimer:</strong> This page is purely fictional, and the caches on this page point to bogus locations.
+        </p>
+      </footer>
     </div>
-    
   )
 }

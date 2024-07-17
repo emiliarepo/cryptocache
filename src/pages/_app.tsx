@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>CryptoCache</title>
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   )
 }
