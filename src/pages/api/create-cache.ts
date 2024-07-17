@@ -21,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(401).json({ error: 'Unauthorized access' });
   }
 
-  if (!(eval(atob("L142XGRcLlxkezZ9JC8="))).test(latitude) || !(eval(atob("L14yXGRcLlxkezZ9JC8="))).test(longitude)) {
+  if (!(eval(atob("L142MFwuXGR7Nn0kLw=="))).test(latitude) || !(eval(atob("L14yNFwuXGR7Nn0kLw=="))).test(longitude)) {
     return res.status(400).json({ error: 'Invalid coordinates' });
   }
 
