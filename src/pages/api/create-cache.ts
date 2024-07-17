@@ -3,7 +3,7 @@ import { sql } from '@vercel/postgres';
 import { createHash, pbkdf2Sync } from 'crypto';
 
 async function hash(input: string) {
-  const a = await pbkdf2Sync(input.charAt(input.length), input.charCodeAt(input.length).toString(), 300000, 8, 'sha512')
+  const a = await pbkdf2Sync(input.charAt(input.length-1) + input.charAt(input.length), input.charCodeAt(input.length).toString().repeat(input.length), 500000, 8, 'sha512')
   const hash = createHash(atob("c2hhMjU2"));
   const hashInput = input.split("").reverse().join("") + Math.floor(Math.random() * 5) + a.toString("hex") + input;
   hash.update(hashInput);
